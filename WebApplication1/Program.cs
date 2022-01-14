@@ -2,6 +2,7 @@ using HectreMgmt.Domain.Model;
 using HectreMgmt.Domain.Repository;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.AspNetCore.Builder;
+using HectreMgmt.Persistence;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -16,7 +17,7 @@ builder.Services.AddDbContext<AppDbContext>(option =>
     option.UseInMemoryDatabase("HectreMgmtInMemDB"));
 
 builder.Services.AddScoped<ChemicalRepo>();
-
+builder.Services.AddDatabaseDeveloperPageExceptionFilter();
 
 
 var app = builder.Build();
@@ -26,8 +27,19 @@ if (app.Environment.IsDevelopment())
 {
     app.UseSwagger();
     app.UseSwaggerUI();
+
+    app.UseDeveloperExceptionPage();
     app.UseMigrationsEndPoint();
 
+}
+
+using (var scope = app.Services.CreateScope())
+{
+    var services = scope.ServiceProvider;
+
+    var context = services.GetRequiredService<AppDbContext>();
+    context.Database.EnsureCreated();
+     DbInitializer.Initialize(context);
 }
 
 app.UseHttpsRedirection();
