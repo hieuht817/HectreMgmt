@@ -1,8 +1,7 @@
-﻿namespace HectreMgmt.Domain
+﻿namespace HectreMgmt.Domain.Model
 {
-    public class Chemical
+    public class Chemical : BaseEntity<string>
     {
-        public string _id { get; set; }
         public string chemicalType { get; set; }
         public string preHarvestIntervalInDays { get; set; }
         public string activeIngredient { get; set; }
@@ -11,5 +10,7 @@
         public DateTime modificationDate { get; set; }
         public DateTime deletionDate { get; set; }
     }
+
+
 
 }
