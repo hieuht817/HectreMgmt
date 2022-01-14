@@ -3,7 +3,9 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.1.32104.313
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WebApplication1", "WebApplication1\WebApplication1.csproj", "{85D54098-3982-47F0-B69F-09F415356A07}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "HectreMgmt", "WebApplication1\HectreMgmt.csproj", "{85D54098-3982-47F0-B69F-09F415356A07}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HectreMgmt.Tests", "HectreMgmt.Tests\HectreMgmt.Tests.csproj", "{28FD8F28-6C43-49A0-A69A-A68F9A54B86C}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -15,6 +17,10 @@ Global
 		{85D54098-3982-47F0-B69F-09F415356A07}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{85D54098-3982-47F0-B69F-09F415356A07}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{85D54098-3982-47F0-B69F-09F415356A07}.Release|Any CPU.Build.0 = Release|Any CPU
+		{28FD8F28-6C43-49A0-A69A-A68F9A54B86C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{28FD8F28-6C43-49A0-A69A-A68F9A54B86C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{28FD8F28-6C43-49A0-A69A-A68F9A54B86C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{28FD8F28-6C43-49A0-A69A-A68F9A54B86C}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
